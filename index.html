@@ -142,6 +142,466 @@ background:radial-gradient(circle,#fff 0 3%,#c1121f 3.5% 21%,transparent 21.5%),
 @keyframes fadein{to{opacity:1}}
 #env>div{transition:transform 1.3s cubic-bezier(.65,0,.35,1),opacity 1s}
 @media(max-width:700px){.half{flex-direction:column}.stripes{display:none}.note{width:90%;margin:4vh auto 0;min-height:0}.memtxt{left:8vw;top:58vh}.collage{top:auto;bottom:6vh;right:4vw}.fr{display:none}}
+/* =========================
+   RESPONSIVE DESIGN
+   Mobile + Tablet + Laptop
+   ========================= */
+
+/* Prevent horizontal overflow */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+* {
+    max-width: 100%;
+}
+
+/* Main pages */
+.page {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100dvh;
+}
+
+/* Center content */
+.center {
+    width: 100%;
+    min-height: 100%;
+    padding: 8vh 6vw;
+}
+
+/* Headings */
+h1 {
+    font-size: clamp(38px, 8vw, 90px);
+}
+
+h2 {
+    font-size: clamp(32px, 6vw, 64px);
+}
+
+/* Buttons */
+.next {
+    width: clamp(50px, 6vw, 64px);
+    height: clamp(50px, 6vw, 64px);
+    font-size: clamp(24px, 3vw, 34px);
+    right: 3vw;
+    bottom: 3vh;
+}
+
+.vbtn {
+    width: clamp(48px, 5.5vw, 58px);
+    height: clamp(48px, 5.5vw, 58px);
+}
+
+/* Letter */
+#letter {
+    width: min(900px, 90vw);
+    max-height: 75vh;
+    font-size: clamp(16px, 2vw, 25px);
+}
+
+/* Trophy section */
+.awrow {
+    width: 90%;
+    max-width: 1100px;
+}
+
+.trophy {
+    width: min(280px, 40vw, 42vh);
+    max-height: 45vh;
+}
+
+#tmsg {
+    width: min(460px, 85vw);
+}
+
+/* Memories */
+.strip {
+    width: min(190px, 24vw);
+}
+
+.collage {
+    width: min(320px, 38vw);
+}
+
+.memtxt {
+    max-width: 40vw;
+}
+
+/* Music player */
+.player {
+    width: min(520px, 88vw);
+}
+
+.pwrap {
+    width: min(700px, 90vw);
+}
+
+.vinyl {
+    width: clamp(90px, 12vw, 170px);
+    height: clamp(90px, 12vw, 170px);
+    right: clamp(-60px, -7vw, -30px);
+}
+
+/* Page 7 */
+#p7 .center {
+    gap: clamp(20px, 6vw, 80px);
+}
+
+#p7 h1 {
+    font-size: clamp(38px, 7vw, 80px);
+}
+
+/* Page 8 */
+.listwrap {
+    width: 90%;
+    max-width: 1100px;
+    gap: clamp(20px, 5vw, 70px);
+}
+
+.listwrap ol {
+    max-width: 600px;
+    font-size: clamp(20px, 2.8vw, 34px);
+}
+
+.star {
+    width: min(380px, 40vw);
+}
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 900px) {
+
+    .frame {
+        inset: 2vh 2vw;
+        border-width: 5px;
+    }
+
+    .center {
+        padding: 7vh 5vw;
+    }
+
+    .awrow {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .trophy {
+        width: min(240px, 45vw);
+        max-height: 38vh;
+    }
+
+    #tmsg {
+        text-align: center;
+        width: 85vw;
+    }
+
+    .strip {
+        left: 6vw;
+        top: 10vh;
+        width: min(160px, 25vw);
+    }
+
+    .collage {
+        right: 5vw;
+        top: 12vh;
+        width: min(280px, 40vw);
+    }
+
+    .memtxt {
+        left: 32vw;
+        top: 42vh;
+    }
+
+    #p7 .center {
+        flex-direction: column !important;
+        gap: 3vh;
+    }
+
+    #p7 h1 {
+        text-align: center !important;
+        transform: rotate(-3deg) !important;
+    }
+
+    .listwrap {
+        flex-direction: column;
+        max-height: 82vh;
+        overflow-y: auto;
+    }
+
+    .star {
+        width: min(300px, 60vw);
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 600px) {
+
+    .frame {
+        inset: 12px;
+        border-width: 4px;
+        border-radius: 20px 35px 18px 30px;
+    }
+
+    .center {
+        padding: 7vh 7vw 10vh;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: clamp(36px, 12vw, 58px);
+        line-height: 1.05;
+    }
+
+    h2 {
+        font-size: clamp(30px, 9vw, 48px);
+    }
+
+    .heart {
+        font-size: clamp(45px, 14vw, 70px);
+    }
+
+    .hint {
+        font-size: 25px;
+    }
+
+    /* Seal */
+    #seal {
+        width: 120px;
+        height: 120px;
+        font-size: 48px;
+    }
+
+    #seal.top {
+        width: 65px;
+        height: 65px;
+        font-size: 28px;
+    }
+
+    /* Letter */
+    #letter {
+        width: 88vw;
+        max-height: 72vh;
+        padding: 0 5px;
+        font-size: 17px;
+        line-height: 1.35;
+    }
+
+    #letter .to {
+        font-size: 32px;
+    }
+
+    /* Trophy */
+    .awrow {
+        width: 90vw;
+        gap: 10px;
+    }
+
+    .trophy {
+        width: min(210px, 55vw);
+        max-height: 34vh;
+    }
+
+    #tmsg {
+        width: 82vw;
+        font-size: 19px;
+        text-align: center;
+    }
+
+    #tmsg .to {
+        font-size: 30px;
+    }
+
+    /* Memories page */
+    .strip {
+        left: 6vw;
+        top: 8vh;
+        width: 42vw;
+    }
+
+    .strip .ph {
+        height: 18vh;
+    }
+
+    .collage {
+        right: 5vw;
+        bottom: 8vh;
+        top: auto;
+        width: 46vw;
+    }
+
+    .collage .ph {
+        height: 13vh;
+    }
+
+    .memtxt {
+        left: 7vw;
+        top: 42vh;
+        font-size: clamp(30px, 9vw, 50px);
+        max-width: 40vw;
+    }
+
+    /* Music */
+    .player {
+        width: 84vw;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .player .ph {
+        width: 75px;
+        height: 90px;
+    }
+
+    .ctl {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+
+    .code {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .vinyl {
+        width: 100px;
+        height: 100px;
+        right: -35px;
+        top: -25px;
+    }
+
+    /* Story page */
+    .paper2 {
+        left: 6vw;
+        width: 88vw;
+        padding: 5vh 12px 0;
+    }
+
+    #story .ln {
+        font-size: clamp(19px, 5vw, 27px);
+        line-height: 1.3;
+    }
+
+    /* 10 things page */
+    #p7 .center {
+        padding: 6vh 5vw;
+    }
+
+    #p7 h1 {
+        font-size: clamp(36px, 10vw, 55px);
+    }
+
+    #p7 .gold {
+        width: min(230px, 65vw);
+    }
+
+    #p7 .gold .ph {
+        width: 100%;
+        height: 30vh;
+    }
+
+    /* List page */
+    .listwrap {
+        width: 88vw;
+        max-height: 78vh;
+        overflow-y: auto;
+        gap: 3vh;
+    }
+
+    .listwrap ol {
+        width: 100%;
+        font-size: clamp(18px, 5vw, 25px);
+        line-height: 1.35;
+    }
+
+    .star {
+        width: 60vw;
+        padding: 35px;
+    }
+
+    .star .ph {
+        height: 20vh;
+    }
+
+    /* Final page */
+    #big {
+        font-size: clamp(42px, 16vw, 90px);
+    }
+
+    #bigem {
+        font-size: clamp(45px, 14vw, 80px);
+    }
+
+    /* Bottom buttons */
+    .next {
+        width: 52px;
+        height: 52px;
+        right: 18px;
+        bottom: 18px;
+        font-size: 26px;
+    }
+
+    .vbtn {
+        width: 46px;
+        height: 46px;
+        right: 80px;
+        bottom: 21px;
+        font-size: 20px;
+    }
+
+    /* Hide decorative elements that can overlap */
+    .fr1,
+    .fr2,
+    .tulip,
+    .orn {
+        display: none;
+    }
+}
+
+/* =========================
+   VERY SMALL PHONES
+   ========================= */
+@media (max-width: 380px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .trophy {
+        width: 175px;
+    }
+
+    #tmsg {
+        font-size: 17px;
+    }
+
+    .player {
+        width: 82vw;
+    }
+
+    .player .ph {
+        width: 60px;
+        height: 75px;
+    }
+
+    .listwrap ol {
+        font-size: 17px;
+    }
+
+    .star {
+        width: 55vw;
+        padding: 25px;
+    }
+}
 </style>
 </head>
 <body>
